@@ -15,12 +15,13 @@
   }
 
   &__logo {
+    position: relative;
+    z-index: 10;
+
     & img {
       height: 60px;
     }
   }
-
-  &__menu {}
 }
 
 .menu {
@@ -36,7 +37,7 @@
 
   &__link {
     position: relative;
-    transition: all 0.3s;
+    transition: opacity 0.3s;
 
     &::after {
       position: absolute;
@@ -69,9 +70,91 @@
   &-menu {
     display: none;
   }
+
+
 }
 
-.icon-menu {
+@media (max-width: 797.98px) {
+  .menu {
+    &__list {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      transition: left 0.3s;
+      padding: 100px 15px 20px 15px;
+      background-color: $color-dark;
+      flex-direction: column;
+      gap: 35px;
+      overflow: auto;
+    }
 
-  &__line {}
+    &__link {
+      font-size: 36px;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .menu-open .menu__list {
+    left: 0;
+  }
+
+  .icon-menu {
+    display: block;
+    position: relative;
+    z-index: 10;
+    width: 30px;
+    height: 18px;
+  }
+
+  .icon-menu__line,
+  .icon-menu::before,
+  .icon-menu::after {
+    position: absolute;
+    content: '';
+    background-color: $color-white;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: 0.3s;
+  }
+
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu__line {
+    top: calc(50% - 1px);
+  }
+
+  .menu-open {
+    & .icon-menu::before {
+      top: calc(50% - 1px);
+      transform: rotate(-45deg);
+    }
+
+    & .icon-menu::after {
+      bottom: calc(50% - 1px);
+      transform: rotate(45deg);
+    }
+
+    & .icon-menu__line {
+      left: 50%;
+      width: 0;
+    }
+
+  }
 }

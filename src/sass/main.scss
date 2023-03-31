@@ -30,6 +30,10 @@ body {
   }
 }
 
+.menu-open body {
+  overflow: hidden;
+}
+
 .wrapper {
   overflow: clip;
   min-height: 100%;
@@ -44,7 +48,12 @@ body {
 }
 
 section:not(:last-child):not(:first-child) {
-  margin-block: 80px
+  margin-block: 80px;
+}
+
+.section-title {
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 
 @import 'block/*.scss';
