@@ -8,6 +8,10 @@ const path = require('../config/path.js')
 const app = require('../config/app.js')
 
 
+// открываем node_modules/gulp-fonter/dist/index.js, находим строку:
+// newFont.path = source.dirname + '\\' + source.stem + '.' + type;
+// , меняем '\\' на '/', и должно заработать.
+
 // Плагины
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
