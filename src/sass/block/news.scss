@@ -1,0 +1,9 @@
+.news {
+  display: flex;
+  justify-content: space-between;
+
+
+  @include ph {
+    color: green;
+  }
+}

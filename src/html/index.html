@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+  @@include('chunk/header.html')
+
+  <h1 class="title">Main11</h1>
+
+  <img src="../img/sl1-min.jpg" alt="#" width="400px">
+
+  @@loop('chunk/news-item.html', '../../data/news.json')
+
+  @@include('chunk/footer.html')
+</body>
+
+</html>
