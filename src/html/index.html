@@ -11,19 +11,21 @@
 </head>
 
 <body>
-  @@include('chunk/header.html')
+  <div class="wrapper">
+    @@include('chunk/header.html')
 
-  <main class="page">
-    <div class="page__container">
-      @@include('chunk/home.html')
-      @@include('chunk/about.html')
-      @@include('chunk/projects.html')
-      @@include('chunk/contacts.html')
-    </div>
-  </main>
+    <main class="page">
+      <div class="page__container">
+        @@include('chunk/home.html')
+        @@include('chunk/about.html')
+        @@include('chunk/projects.html')
+        @@include('chunk/contacts.html')
+      </div>
+    </main>
 
-  @@include('chunk/footer.html')
+    @@include('chunk/footer.html')
 
+  </div>
   <script defer src="js/main.js"></script>
 </body>
 

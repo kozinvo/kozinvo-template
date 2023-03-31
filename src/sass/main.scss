@@ -2,7 +2,14 @@
 @import 'fonts.scss';
 
 //vars
-$base-font-size: 32px;
+$color-black: #000;
+$color-white: #fff;
+$color-light: #b4b2b2;
+$color-dark: #605f5f;
+$color-text-main: $color-black;
+$color-accent: #1c2fad;
+$container: 90rem;
+$container-padding: 0.9375rem;
 
 //mixins
 @mixin ph {
@@ -14,13 +21,30 @@ $base-font-size: 32px;
 //base styles
 body {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-size: $base-font-size;
-  line-height: 1.5;
-  background: url('../img/s2-4-min.png') no-repeat 0 0 / cover;
+  font-size: 1.375rem;
+  background: $color-light;
+  color: $color-text-main;
 
   @include ph {
     color: red;
   }
+}
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+[class*='__container'] {
+  max-width: calc($container + 2*$container-padding);
+  padding-inline: $container-padding;
+  margin-inline: auto;
+}
+
+section:not(:last-child):not(:first-child) {
+  margin-block: 80px
 }
 
 @import 'block/*.scss';
