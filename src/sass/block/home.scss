@@ -1,0 +1,36 @@
+.home {
+  & h1 {
+    font-family: 'Montserrat-Bold', Arial, serif;
+    font-size: 2.75rem;
+    line-height: 136.363636%;
+    /* 60/44 */
+
+  }
+
+  &__container {
+    height: calc(100vh - $header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex: 0 1 60%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {}
+
+  &__btn {}
+
+  &__img {
+    flex: 0 1 30%;
+    border: 1px solid #000;
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+    }
+  }
+}
