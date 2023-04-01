@@ -1,0 +1,23 @@
+.skills {
+  background: $color-light;
+  margin-block: 0px;
+  padding-block: 80px;
+
+  &__container {}
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 1rem;
+  }
+}
+
+.skill {
+  background-color: $color-white;
+
+  &__title {}
+
+  &__info {}
+
+  &__progress {}
+}
