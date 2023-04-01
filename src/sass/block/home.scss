@@ -1,5 +1,6 @@
 .home {
   & h1 {
+    margin: 0;
     font-family: 'Montserrat-Bold', Arial, serif;
     font-size: clamp(2rem, 3vw + 1rem, 2.75rem);
     line-height: 136.363%;
@@ -13,7 +14,7 @@
   }
 
   &__content {
-    flex: 0 1 60%;
+    flex: 0 1 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,18 +36,22 @@
 @media (max-width: 767.98px) {
   .home {
     &__container {
+      // padding-top: calc(20px + $header-height);
       padding-block: 20px;
       flex-direction: column-reverse;
       justify-content: center;
+      gap: 20px;
     }
 
     &__content {
+      flex: none;
       text-align: center;
       align-items: center;
       gap: 24px;
     }
 
     &__img {
+      flex: none;
       width: 64%;
       max-width: 360px;
     }
