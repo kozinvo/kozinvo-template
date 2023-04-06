@@ -4,7 +4,7 @@ window.addEventListener("load", windowLoad);
 
 function windowLoad() {
   const home = document.querySelector('.home');
-  console.log(home);
+
   window.addEventListener('scroll', () => {
     let scrollTop = window.scrollY;
     let homeCenter = home.offsetHeight / 2;
@@ -15,7 +15,6 @@ function windowLoad() {
     }
   });
 }
-
 
 // Events click
 document.addEventListener("click", documentActions);
@@ -46,9 +45,6 @@ function documentActions(e) {
   }
 };
 
-
-
-
 //Launch circle progressbar
 function startCircles() {
   const progressValues = document.querySelectorAll('.skill__progress span');
@@ -72,6 +68,7 @@ function startCircles() {
   });
 };
 startCircles();
+
 
 
 

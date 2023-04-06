@@ -1,7 +1,7 @@
 .home {
   & h1 {
     margin: 0;
-    font-family: 'Montserrat-Bold', Arial, serif;
+    font-weight: bold;
     font-size: clamp(2rem, 3vw + 1rem, 2.75rem);
     line-height: 136.363%;
   }

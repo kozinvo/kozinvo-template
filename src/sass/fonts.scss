@@ -4,13 +4,15 @@
   src: url('../font/Montserrat-Regular.woff2') format('woff2'),
     url('../font/Montserrat-Regular.woff') format('woff'),
     url('../font/Montserrat-Regular.ttf') format('ttf'),
-    url('../font/Montserrat-Regular.eot') format('eot')
+    url('../font/Montserrat-Regular.eot') format('eot');
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Montserrat-Bold';
+  font-family: 'Montserrat';
   src: url('../font/Montserrat-Bold.woff2') format('woff2'),
     url('../font/Montserrat-Bold.woff') format('woff'),
     url('../font/Montserrat-Bold.ttf') format('ttf'),
-    url('../font/Montserrat-Bold.eot') format('eot')
+    url('../font/Montserrat-Bold.eot') format('eot');
+  font-weight: 700;
 }
