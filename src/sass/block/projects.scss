@@ -77,42 +77,16 @@
   .project {
     flex-direction: column;
 
-    &:not(:first-child) {
-      padding-top: 30px;
-    }
-
     &__img {
-      height: 60vw;
-      // max-height: auto;
-
+      width: 70vw;
       flex: auto;
-
-      & img {
-        width: auto;
-        border-radius: 10px;
-      }
     }
+  }
+}
 
-    &__content {
-      flex-shrink: 2;
-      row-gap: 20px;
-    }
-
-    &__title {
-      font-size: 1.875rem;
-      line-height: 146.666667%;
-    }
-
-    &__info {
-      display: flex;
-      align-items: center;
-      column-gap: 20px;
-    }
-
-    &__year {}
-
-    &__descr {}
-
-    &__text {}
+@media (max-width: 479.98px) {
+  .project__img {
+    width: 100%;
+    flex: auto;
   }
 }
