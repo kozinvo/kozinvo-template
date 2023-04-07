@@ -33,7 +33,7 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media ($md-m) {
   .home {
     &__container {
       // padding-top: calc(20px + $header-height);

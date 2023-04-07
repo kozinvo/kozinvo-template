@@ -1,6 +1,23 @@
 @import 'clear.scss';
 @import 'fonts.scss';
 
+//z-index
+$z-index-1: 1; //content
+$z-index-2: 2; //content
+$z-index-3: 3; //overlay or filter
+$z-index-4: 4; //sidebar, burger
+$z-index-5: 5; //modal popup
+$z-index-6: 6; //max
+
+//media
+$md-xxl: 'max-width:1399.98px';
+$md-xl: 'max-width:1199.98px';
+$md-l: 'max-width:991.98px';
+$md-m: 'max-width:767.98px';
+$md-s: 'max-width:575.98px';
+$md-xs: 'max-width:374.98px';
+$md-xxs: 'max-width:319.98px';
+
 //vars
 $color-black: #000;
 $color-white: #fff;

@@ -25,8 +25,8 @@ const webpCss = require('gulp-webp-css')
 
 const scss = () => {
   return src(path.scss.src, {
-      sourcemaps: app.isDev
-    })
+    sourcemaps: app.isDev
+  })
     .pipe(plumber({
       errorHandler: notify.onError(error => ({
         title: "SCSS",
