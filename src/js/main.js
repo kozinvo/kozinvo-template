@@ -11,15 +11,28 @@ function windowLoad() {
     // console.log(scrollTop);
     // console.log(homeCenter);
     if (scrollTop > homeCenter) {
-      console.log('bingo');
+      // console.log('bingo');
     }
   });
 }
+
+const tabBtns = Array.from(document.querySelectorAll('.tab__btn'));
+const tabIndicator = document.querySelector('.tab__indicator');
+const tabContent = Array.from(document.querySelectorAll('.tab__content'));
+tabBtns[0].classList.add('active');
+tabContent[0].classList.add('active');
+let activeBtn = tabBtns[0];
+let activeTabContent = tabContent[0];
+const numTab = tabBtns.length;
+console.log(numTab);
+const root = document.querySelector(':root');
+root.style.setProperty('--num-tab', numTab);
 
 // Events click
 document.addEventListener("click", documentActions);
 function documentActions(e) {
   const targetEl = e.target;
+
 
   // burger menu
   if (targetEl.closest('.icon-menu')) {
@@ -42,6 +55,33 @@ function documentActions(e) {
         behavior: "smooth"
       })
     }
+  }
+
+
+  //tabs
+  if (targetEl.closest('.tab__btn')) {
+    let btn = targetEl;
+    changeActiveTab();
+    function changeActiveTab() {
+      if (btn.classList.contains('active')) {
+        return
+      }
+      btn.classList.add('active');
+      activeBtn.classList.remove('active');
+      activeBtn = btn;
+      changeIndicator();
+    };
+    function changeIndicator() {
+      const indexBtn = tabBtns.indexOf(btn);
+      tabIndicator.style.left = `calc(${indexBtn}*100%/${numTab})`;
+      changeContent(indexBtn);
+    };
+    function changeContent(index) {
+      activeTabContent.classList.remove('active');
+      tabContent[index].classList.add('active');
+      activeTabContent = tabContent[index];
+    }
+
   }
 };
 
@@ -68,6 +108,8 @@ function startCircles() {
   });
 };
 startCircles();
+
+
 
 
 
